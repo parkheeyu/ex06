@@ -17,6 +17,7 @@ const BookPage = () => {
             headers: {"Authorization": "KakaoAK d96a3bcd9957a07238692b89c12e1e77"},
             params : {"query" : query, "size" : 6, "page":page}
         }
+        
         setLoading(true);
         const result =await axios.get(url, config);
         setBooks(result.data.documents);
